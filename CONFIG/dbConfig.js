@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 const mongoose = require('mongoose');
 
 const connectDB = async function () {
-  const uri = "mongodb+srv://caa:demodemo10@cluster0.jpto7.mongodb.net/Ztar?retryWrites=true&w=majority";
+  const uri = process.env.URI
   await mongoose
   .connect(uri, {
     useNewUrlParser: true,
