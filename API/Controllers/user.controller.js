@@ -1,6 +1,6 @@
 //Requires
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
+// const bcrypt = require('bcryptjs')
+// const jwt = require('jsonwebtoken')
 //var authenticate = require('../authentication/verifyToken')
 
 
@@ -44,9 +44,10 @@ const createShipment = async (req, res) => {
     }
     catch (e) {
       console.log(e)
+       
       res.json({
         statusCode: unknown.statusCode,
-        message: unknown.message
+        message: e.message
       })
     }
   } else if ((req.body.ID) === (company.UPS)) {
@@ -72,7 +73,7 @@ const createShipment = async (req, res) => {
       console.log(e)
       res.json({
         statusCode: unknown.statusCode,
-        message: unknown.message
+        message: e.message
       })
     }
   }

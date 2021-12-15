@@ -3,7 +3,6 @@
 //3-export model 
 const mongoose = require("mongoose")
 
-
 let FedExSchema = new mongoose.Schema({
     carrierServiceID:
     {
@@ -25,7 +24,7 @@ let FedExSchema = new mongoose.Schema({
         },
         widthCM:
         {
-            type: [Number,'Expected a number, got{VALUE}'],
+            type: [Number,`Expected a number, got{VALUE}`],
             required: [true, 'Width field is required.'],
             min: [0.00001, 'Must be a number more than Zero, got {VALUE}']
         },
@@ -43,7 +42,7 @@ let FedExSchema = new mongoose.Schema({
         },
         weightUnit:
         {
-            type: [Number,'Expected a number, got{VALUE}'],
+            type: String,
             required: [true, 'Weight Unit field is required.'],
             enum: {
                 values: ["g"],
