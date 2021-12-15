@@ -21,14 +21,11 @@ To Run:
 
      npm start
 
-## Decrypt .env.enc
+## Create .env
 
-As early as possible in your application, require and configure dotenv.
+Create a .env file similar .env_sample.
 
-    let secureEnv = require('secure-env');
-    global.env = secureEnv({secret:'mySecretPassword'});
-    
-Please, contact owner for the real password.
+Please, contact owner for any issues.
 
 ## Endpoints
 1. Create a shipment:
